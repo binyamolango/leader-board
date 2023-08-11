@@ -1,67 +1,97 @@
-body {
+*,
+::after,
+::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.main {
-  width: 1000px;
+body {
+  margin-left: 9%;
+  margin-top: 0.9em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 1440px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid gray;
-}
-
-.header {
-  flex: 100%;
-  border-bottom: 1px solid gray;
 }
 
 h1 {
-  padding-left: 1.5em;
+  font-size: 3em;
 }
 
-.left,
-.right {
-  flex: 1 40%;
-  padding: 50px;
+h2 {
+  font-size: 2.25em;
 }
 
-.left .title {
+main {
   display: flex;
+  gap: 9%;
+  margin: 4%;
+}
+
+section {
+  min-width: 38%;
+}
+
+#scores-heading {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: baseline;
+  gap: 0.9em;
 }
 
-.left .title button {
-  height: 40px;
+button {
+  background: #fff;
+  border: 2px solid;
+  box-shadow: 1px 1px 1px;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 6em;
 }
 
-table {
-  width: 100%;
-}
-
-th,
-td {
-  border: 1px solid rgb(6, 165, 165);
-  text-align: left;
+ul {
+  border: 2px solid;
+  margin-top: 10%;
+  list-style: none;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5em;
+  margin-top: 9%;
+  width: 73%;
 }
 
 form input {
-  height: 30px;
-  font-size: 12pt;
-  margin-bottom: 15px;
-  border-radius: 10px;
+  width: 100%;
+  border: 2px solid;
 }
 
-form input[type="submit"] {
-  width: 200px;
+form input,
+.list {
+  font-size: 1.5em;
+  font-weight: 500;
+  height: 1.75em;
+  padding: 0.5em;
 }
 
-.footer {
-  background-color: rgb(133, 22, 236);
-  flex: 100%;
+.list:nth-child(even) {
+  background: rgb(230, 224, 224);
+}
+
+footer {
+  background: rgb(230, 224, 224);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0.9% 9%;
+  font-size: 1.5em;
+  font-weight: 500;
 }
