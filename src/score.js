@@ -1,5 +1,15 @@
 const scoreList = document.getElementById('scores');
 
+const add = async (score) => {
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/L5KWB7dBUtngsInWODu0/scores/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(score),
+  });
+};
+
 const disScores = (scores) => {
   scoreList.innerHTML = '';
   scores.forEach((score) => {
@@ -8,12 +18,4 @@ const disScores = (scores) => {
   });
 };
 
-const scoObj = {
-  scores: [],
-};
-
-const add = (score) => {
-  scoObj.scores.push(score);
-};
-
-export { add, disScores, scoObj };
+export { add, disScores };
