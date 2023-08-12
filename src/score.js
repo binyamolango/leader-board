@@ -11,11 +11,11 @@ const add = async (score) => {
 };
 
 const disScores = (scores) => {
-    scoreList.innerHTML = '';
-    scores.forEach((score) => {
-      const list = `<li class="list">${score.user}: ${score.score}</li>`;
-      scoreList.insertAdjacentHTML('beforeend', list);
-    });
-  };
-  
-  export { add, disScores };
+  scoreList.innerHTML = '';
+  scores.forEach((score) => {
+    const list = `<li class="list">${score.user}: ${score.score}</li>`;
+    scoreList.insertAdjacentHTML('beforeend', list);
+  });
+};
+
+export { add, disScores };
