@@ -85,6 +85,10 @@ form input,
   background: rgb(230, 224, 224);
 }
 
+.btn {
+  border-radius: 5px;
+}
+
 footer {
   background: rgb(230, 224, 224);
   position: absolute;
